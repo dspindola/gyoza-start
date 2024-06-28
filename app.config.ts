@@ -1,6 +1,12 @@
+import bunfig from "./bunfig.toml"
+
 export default {
 	server: {
-		hostname: "0.0.0.0",
+		hostname: import.meta.env?.HOSTNAME ?? "0.0.0.0",
+		development: import.meta.env.NODE_ENV !== "production"
+	},
+	bun: {
+		bunfig: bunfig
 	},
 	routers: [
 		{

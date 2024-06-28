@@ -1,7 +1,7 @@
-run = "echo 'Hello, world!'"
-entrypoint = ""
-
+run = "bun run dev"
+entrypoint = "./.gyoza/bin/gyoza.ts"
 modules = ["typescript-language-server", "web", "nix"]
+compile = ["bun", "run", "./.gyoza/scripts/build.ts"]
 
 [nix]
 channel = "stable-23_11"
@@ -13,14 +13,22 @@ BUN_INSTALL = "/home/runner/$REPL_SLUG/.config/.bun"
 XDG_CONFIG_HOME = "/home/runner/$REPL_SLUG/.config"
 XDG_CACHE_HOME = "/home/runner/$REPL_SLUG/.cache"
 
+[packager]
+language = "bun"
+[packager.features]
+enabledForHosting = false
+guessImports = true
+packageSearch = true
+
 [[ports]]
 localPort = 3000
-externalPort = 3000
+externalPort = 80
 
 [[ports]]
 localPort = 5173
 externalPort = 5173
+exposeLocalhost = true
 
-[[ports]]
-localPort = 8080
-externalPort = 80
+[auth]
+pageEnabled = true
+buttonEnabled = false

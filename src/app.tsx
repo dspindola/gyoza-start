@@ -8,6 +8,9 @@ export default function App({ children }: {
 		<head>
 			<title>Lucky Fortunate Cones</title>
 			<link rel="stylesheet" href="/style.css" />
+			<link rel="icon" href="/favicon.svg" type={
+				"image/svg+xml"
+			} />
 		</head>
 		<body data-id="body">
 			{children}

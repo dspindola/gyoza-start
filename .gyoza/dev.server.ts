@@ -1,4 +1,7 @@
 import { Elysia } from "elysia"
+import { staticPlugin } from "@elysiajs/static"
+import { cors } from "@elysiajs/cors"
+
 import server from "../server"
 import input from "./.tmp/input"
 
@@ -15,7 +18,12 @@ console.log(_assets, _dist, _routes)
 
 const dev = server(new Elysia({
 	serve: input.config.server
-}));
+}).use(cors()).use(staticPlugin({
+	prefix: "/",
+	assets: "public",
+	alwaysStatic: true,
+	directive: "public"
+})));
 
 dev.listen(input.config.server, ({ url }) => {
 	console.log('%s', url)
