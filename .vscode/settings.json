@@ -22,11 +22,8 @@
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
-        ".replit": true,
-        "node_modules": true,
         "**/.hg": true,
         "**/.local": true,
-        "**/.gyoza/.tmp": true,
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,

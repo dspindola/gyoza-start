@@ -1,0 +1,13 @@
+type: tool
+language: typescript
+platform: bun
+
+id: gyoza-start
+
+tags:
+  - gyoza-tool
+  - binary
+
+tasks:
+  compile:
+    command: "bun build --compile ./gyoza-start.ts --outfile=./dist/gyoza-start"

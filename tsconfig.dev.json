@@ -4,7 +4,6 @@
 		"allowJs": true,
 		"module": "ESNext",
 		"declaration": true,
-		"outDir": "./.gyoza/.out",
 		"composite": true,
 		"moduleResolution": "Bundler",
 		"allowSyntheticDefaultImports": true,
@@ -13,5 +12,7 @@
 		"target": "ESNext",
 		"jsx": "preserve"
 	},
-	"include": ["**/*.d.ts"]
+	"include": [
+		"types/**/*.d.ts"
+	]
 }

@@ -1,0 +1,19 @@
+node:
+  packageManager: bun
+  bun: {}
+
+bun:
+  version: 1.1.17
+  rootPackageOnly: true
+  syncProjectWorkspaceDependencies: true
+
+typescript:
+  root: "."
+  includeSharedTypes: true
+  projectConfigFileName: tsconfig.json
+  rootOptionsConfigFileName: tsconfig.dev.json
+  routeOutDirToCache: true
+  createMissingConfig: true
+  syncProjectReferences: false
+  syncProjectReferencesToPaths: false
+  includeProjectReferenceSources: false

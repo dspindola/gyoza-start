@@ -1,0 +1,19 @@
+{
+    "name": "@gyoza/plugins",
+    "type": "module",
+    "main": "mod.ts",
+    "files": [
+        "src",
+        "mod.ts"
+    ],
+    "version": "0.0.1",
+    "module": "mod.ts",
+    "exports": {
+        ".": {
+            "default": "./mod.ts"
+        }
+    },
+    "devDependencies": {
+        "@types/bun": "1.1.6"
+    }
+}

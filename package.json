@@ -1,12 +1,8 @@
 {
-  "name": "lucky-fortunate-cones",
-  "type": "module",
-  "version": "0.0.1",
-  "workspaces": ["{.,packages}/**", "docs/**"],
-  "scripts": {
-    "serve:docs": "bun run --cwd=./docs bun --watch ./docs.tsx",
-    "serve:dev": "bun run ./.gyoza/bin/gyoza.ts dev --config=./app.config.ts --port=3000 --mode=development --hostname=0.0.0.0"
-  },
+  "name": "@gyoza/gyoza",
+  "workspaces": [
+    "{app,packages,docs,tools}/**"
+  ],
   "dependencies": {
     "@elysiajs/cors": "^1.0.2",
     "@elysiajs/eden": "^1.0.14",
@@ -16,8 +12,7 @@
     "elysia": "^1.0.25",
     "react": "^19.0.0-rc-e02baf6c92-20240627",
     "react-dom": "^19.0.0-rc-e02baf6c92-20240627",
-    "signal-polyfill": "^0.1.1",
-    "src": "^1.1.2"
+    "signal-polyfill": "^0.1.1"
   },
   "overrides": {
     "@types/react": "npm:types-react@rc",

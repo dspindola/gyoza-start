@@ -1,0 +1,24 @@
+preload = ["./app.config.ts"]
+jsx = "react-jsx"
+jsxImportSource = "react"
+logLevel = "debug"
+telemetry = false
+
+[define]
+"process.env.PORT" = "3000"
+"process.env.HOSTNAME" = "'localhost'"
+"Bun.origin" = "process.env.origin"
+
+[loader]
+".tsx" = "tsx"
+".css" = "css"
+".jsx" = "jsx"
+".sqlite" = "sqlite"
+
+[run]
+bun = true
+shell = "bun"
+
+[install]
+auto = "auto"
+dev = true

@@ -1,0 +1,9 @@
+type: application
+language: typescript
+platform: bun
+
+id: "docs"
+
+tasks:
+  serve:
+    command: "bun run --watch ./docs.tsx"
