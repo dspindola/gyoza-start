@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+:root {
+	--bg-color: #222249;
+	--text-color: #ffffff;
+	--color-tertiary: #000000;
+	--color-quaternary: #000000;
+	--color-quinary: #000000;
+	--color-senary: #000000;
+	--color-septenary: #000000;
+	--color-octonary: #000000;
+	--color-nonary: #000000;
+	--color-denary: #000000;
+	--color-unary: #000000;
+	--color-dozenary: #000000;
+	--color-hundredary: #000000
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}

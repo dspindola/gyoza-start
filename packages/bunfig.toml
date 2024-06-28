@@ -1,0 +1,5 @@
+jsx = "react-jsx"
+jsxImportSource = "react"
+[loader]
+".tsx" =  "tsx"
+".ts" = "ts"

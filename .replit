@@ -1,0 +1,22 @@
+run = "echo 'Hello, world!'"
+entrypoint = ""
+
+modules = ["typescript-language-server", "web", "nix"]
+
+[nix]
+channel = "stable-23_11"
+
+[env]
+PATH = "/home/runner/$REPL_SLUG/.config/.bun/bin:/home/runner/$REPL_SLUG/.config/.proto/bin:/home/runner/$REPL_SLUG/.config/.proto/.bun/bin:/home/runner/$REPL_SLUG/node_modules/.bin"
+PROTO_HOME = "/home/runner/$REPL_SLUG/.config/.proto"
+BUN_INSTALL = "/home/runner/$REPL_SLUG/.config/.bun"
+XDG_CONFIG_HOME = "/home/runner/$REPL_SLUG/.config"
+XDG_CACHE_HOME = "/home/runner/$REPL_SLUG/.cache"
+
+[[ports]]
+localPort = 3000
+externalPort = 3000
+
+[[ports]]
+localPort = 8080
+externalPort = 80
