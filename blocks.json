@@ -2,25 +2,16 @@
 	"0": {
 		"title": "Bun exec shell command",
 		"runner": "bun",
-		"command": [
-			"exec",
-			"ls"
-		]
+		"command": ["exec", "ls"]
 	},
 	"1": {
 		"title": "Bun print code output",
 		"runner": "bun",
-		"command": [
-			"--print",
-			"'Bun'"
-		]
+		"command": ["--print", "'Bun'"]
 	},
 	"2": {
 		"title": "Bun print file content",
 		"runner": "bun",
-		"command": [
-			"--print",
-			"await Bun.file(\"package.json\").json()"
-		]
+		"command": ["--print", "await Bun.file(\"package.json\").json()"]
 	}
 }

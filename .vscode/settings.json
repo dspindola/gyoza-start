@@ -1,0 +1,78 @@
+{
+    "path-intellisense.absolutePathToWorkspace": true,
+    "path-intellisense.mappings": {
+        "~codepark": "/workspaces/gyoza-start/.codepark"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "accessibility.hideAccessibleView": true,
+    "tabnine.ignoreCertificateErrors": true,
+    "tabnine.receiveBetaChannelUpdates": true,
+    "tabnine.experimentalAutoImports": true,
+    "tabnine.logFilePath": "/workspaces/gyoza-start/.local/var/tabnine/.logs/tabnine.log",
+    "tabnine.codeLensEnabled": true,
+    "tabnine.logEngine": true,
+    "tabnine.logLevel": "Debug",
+    "editor.fontSize": 14,
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        },
+        "nushell": {
+            "path": "/home/codespace/.bun/bin/nu"
+        }
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "javascript": "bun",
+        "typescript": "bun",
+        "javascriptreact": "bun",
+        "typescriptreact": "bun"
+    },
+    "code-runner.customCommand": "nu -c",
+    "code-runner.executorMapByFileExtension": {
+        ".djs": "ls",
+    },
+    "biome.enabled": true,
+    "biome.rename": true,
+    "editor.renderWhitespace": "all",
+    "editor.minimap.scale": 2,
+    "editor.smoothScrolling": true,
+    "workbench.fontAliasing": "antialiased",
+    "editor.formatOnSave": true,
+    "path-intellisense.showHiddenFiles": true,
+    "path-intellisense.ignoreTsConfigBaseUrl": true,
+    "typescript.suggest.paths": true,
+    "javascript.suggest.paths": true,
+    "files.associations": {
+        "**/.codepark": "toml"
+    }
+}

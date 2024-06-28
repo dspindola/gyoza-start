@@ -1,3 +1,3 @@
-import { plugin } from "./plugin"
+import { plugin } from "./plugin";
 
-Bun.plugin(plugin)
+Bun.plugin(plugin);

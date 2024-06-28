@@ -6,24 +6,27 @@ import App from "./app";
 
 export async function handleRequest(context: Context) {
 	const router = createRouter({
-		assets: 'src/routes',
+		assets: "src/routes",
 		origin: Bun.origin,
-		prefix: '/',
-		fileExtensions: ['.tsx'],
-		type: "fs"
+		prefix: "/",
+		fileExtensions: [".tsx"],
+		type: "fs",
 	});
 
 	const route = router.match(context.request) as MatchedRoute;
 
 	const module = await import(route.filePath);
 
-	console.log(route.params)
+	console.log(route.params);
 
-	const stream = await renderToReadableStream(<App>
-		<module.default {...{ params: route.params, query: route.query }} />
-	</App>, {})
+	const stream = await renderToReadableStream(
+		<App>
+			<module.default {...{ params: route.params, query: route.query }} />
+		</App>,
+		{},
+	);
 
-	await stream.allReady
+	await stream.allReady;
 
-	return new Response(stream)
+	return new Response(stream);
 }

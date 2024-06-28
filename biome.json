@@ -1,0 +1,63 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"formatter": {
+		"ignore": [
+			".gyoza",
+			"node_modules",
+			".codepark",
+			".config",
+			".vscode"
+		],
+		"enabled": true
+	},
+	"vcs": {
+		"root": "./",
+		"clientKind": "git",
+		"defaultBranch": "main",
+		"enabled": true,
+		"useIgnoreFile": true
+	},
+	"linter": {
+		"ignore": [
+			".gyoza",
+			"node_modules",
+			".codepark",
+			".config",
+			".vscode"
+		],
+		"enabled": true,
+		"include": [
+			"src/**/*.ts",
+			"src/**/*.tsx",
+			"src/**/*.css",
+			"packages/**/*.ts",
+			"packages/**/*.tsx"
+		],
+		"rules": {
+			"all": true,
+			"security": {
+				"all": true
+			},
+			"complexity": {
+				"all": true
+			},
+			"correctness": {
+				"all": true
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"enabled": true,
+			"jsxQuoteStyle": "single"
+		},
+		"jsxRuntime": "transparent",
+		"globals": [
+			"Bun",
+			"import.meta"
+		]
+	}
+}

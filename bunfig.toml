@@ -3,6 +3,10 @@ jsxImportSource = "react"
 smol = true
 preload = ["./packages/plugins/gyoza-plugin-tailwind/loader.ts"]
 
+[define]
+"process.env.PORT" = "3000"
+"process.env.HOSTNAME" = "'localhost'"
+
 [css]
 ".tsx" = "tsx"
 ".css" =  "text"

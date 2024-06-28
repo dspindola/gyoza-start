@@ -1,0 +1,9 @@
+preload = ["./mdx.js"]
+jsx = "react-jsx"
+jsxImportSource = "react"
+
+smol = true
+
+[define]
+"process.env.PORT" = "8080"
+"process.env.HOSTNAME" = "'localhost'"
