@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@elysiajs/eden": "^1.0.14",
+    "@elysiajs/static": "^1.0.3",
     "db0": "^0.1.4",
     "elysia": "^1.0.25",
     "react": "^19.0.0-rc-e02baf6c92-20240627",
@@ -19,6 +20,7 @@
     "@types/react-dom": "npm:types-react-dom@rc"
   },
   "devDependencies": {
+    "@mdx-js/esbuild": "^3.0.1",
     "@types/bun": "latest",
     "@types/react": "npm:types-react@rc",
     "@types/react-dom": "npm:types-react-dom@rc"
