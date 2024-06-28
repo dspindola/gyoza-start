@@ -1,13 +1,30 @@
+preload = ["./.gyoza/plugins/index.ts"]
 jsx = "react-jsx"
 jsxImportSource = "react"
-smol = true
-preload = ["./packages/plugins/gyoza-plugin-tailwind/loader.ts"]
+logLevel = "debug"
+telemetry = false
+publicPath = "/"
+publicDir = "./public"
 
 [define]
 "process.env.PORT" = "3000"
 "process.env.HOSTNAME" = "'localhost'"
+"Bun.origin" = "process.env.origin"
 
-[css]
+[loader]
 ".tsx" = "tsx"
-".css" =  "text"
-".svg" = "base64"
+".css" = "css"
+".jsx" = "jsx"
+".sqlite" = "sqlite"
+
+[run]
+bun = true
+shell = "bun"
+
+[test]
+root = "./__tests__"
+preload = ["./__tests__/preload.ts"]
+
+[install]
+auto = "auto"
+dev = true

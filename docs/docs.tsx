@@ -5,7 +5,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 const router = new Bun.FileSystemRouter({
 	dir: "./pages",
 	style: "nextjs",
-	fileExtensions: [".md"],
+	fileExtensions: [".mdx"],
 });
 
 const app = new Elysia()
@@ -23,10 +23,16 @@ const app = new Elysia()
 				renderToStaticMarkup(
 					<html className='bg-black text-white'>
 						<head>
-							<title>@gyoza/docs</title>
+							<title>{Page.meta.title}</title>
 							<script src='https://cdn.tailwindcss.com'></script>
 						</head>
 						<body className='p-4 font-sans text-3xl'>
+							<a href='/'>/</a>
+							<a href='/dx'>/dx</a>
+							<a href='/intro'>/intro</a>
+							<a href='/contrib'>/contrib</a>
+							<a href='/dev/app.tsx'>/dev/app.tsx</a>
+
 							<Page.default />
 						</body>
 					</html>,

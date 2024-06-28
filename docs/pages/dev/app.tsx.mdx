@@ -1,0 +1,49 @@
+export const meta = {
+    loader: "tsx",
+    target: "browser"
+};
+
+<>
+```tsx
+import React, { use } from "react"
+
+function createRouter() {
+    const routes = {
+        "/":React.lazy(() => import("./routes/index.tsx").then((module) => ({
+            default: module.Route,
+            Route: module.Route,
+        }))),
+        '/about':  React.lazy(() => import("./routes/about.tsx").then((module) => ({
+            default: () => <module.Route/>,
+            Route: module.Route,
+        })))
+    };
+
+    return {
+        routes,
+        match: async (path: keyof typeof routes) => {
+            const Component = routes[path]
+
+            return <Component/>
+        }
+    }
+}
+
+const router = createRouter()
+
+function $Route({ children }: { children: React.ReactNode }) {
+    return <React.Suspense>
+        {children}
+    </React.Suspense>
+}
+
+function App() {
+    const Route = router.match(window.location.pathname  as keyof typeof router.routes )
+    return <$Route>
+     {Route}
+    </$Route>
+}
+
+export {App}
+```
+</>

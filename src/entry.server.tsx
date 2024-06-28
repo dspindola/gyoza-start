@@ -1,32 +1,41 @@
 import { createRouter } from "@/packages/router/router";
-import type { MatchedRoute } from "bun";
+import type { FileSystemRouter, MatchedRoute } from "bun";
 import type { Context } from "elysia";
 import { renderToReadableStream } from "react-dom/server";
-import App from "./app";
+import { App } from "./app";
 
 export async function handleRequest(context: Context) {
 	const router = createRouter({
 		assets: "src/routes",
 		origin: Bun.origin,
 		prefix: "/",
-		fileExtensions: [".tsx"],
+		fileExtensions: [".tsx", ".jsx", ".mdx", ".js"],
 		type: "fs",
-	});
+	}) as FileSystemRouter
+
+	router.reload()
 
 	const route = router.match(context.request) as MatchedRoute;
 
 	const module = await import(route.filePath);
 
-	console.log(route.params);
-
 	const stream = await renderToReadableStream(
 		<App>
-			<module.default {...{ params: route.params, query: route.query }} />
+			<module.Route {...{ params: route.params, query: route.query }} />
 		</App>,
-		{},
+		{
+			onError(error, errorInfo) {
+				console.log(error);
+			},
+		},
 	);
 
 	await stream.allReady;
 
-	return new Response(stream);
+	return new Response(stream, {
+		status: 200,
+        headers: {
+            "content-type": "text/html",
+        },
+	});
 }

@@ -1,5 +1,6 @@
 {
     "path-intellisense.absolutePathToWorkspace": true,
+    "biome_lsp.trace.server": "off",
     "path-intellisense.mappings": {
         "~codepark": "/workspaces/gyoza-start/.codepark"
     },
@@ -17,6 +18,19 @@
     },
     "[javascriptreact]": {
         "editor.defaultFormatter": "biomejs.biome"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        ".replit": true,
+        "node_modules": true,
+        "**/.hg": true,
+        "**/.local": true,
+        "**/.gyoza/.tmp": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/*.crswap": true
     },
     "accessibility.hideAccessibleView": true,
     "tabnine.ignoreCertificateErrors": true,
@@ -74,5 +88,7 @@
     "javascript.suggest.paths": true,
     "files.associations": {
         "**/.codepark": "toml"
-    }
+    },
+    "gitlens.experimental.generateCommitMessagePrompt": "Now, please generate a commit message. Ensure that it includes a precise and informative subject line that succinctly summarizes the crux of the changes in under 50 characters. If necessary, follow with an explanatory body providing insight into the nature of the changes, the reasoning behind them, and any significant consequences or considerations arising from them. Conclude with any relevant issue references at the end of the message.",
+    "gitlens.ai.experimental.generateCommitMessage.enabled": true
 }

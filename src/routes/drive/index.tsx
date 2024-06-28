@@ -1,8 +1,8 @@
 import React from "react";
-import blocks from "../../../blocks.json";
-import Block from "src/components/Block";
+import blocks from "~/blocks.json";
+import { Block } from "src/components/Block";
 
-export default function Index() {
+export function Route() {
 	return (
 		<main>
 			<h1>blocks</h1>

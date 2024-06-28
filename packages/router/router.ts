@@ -13,6 +13,13 @@ export function createRouter({
 }) {
 	switch (type) {
 		case "fs":
+			return new Bun.FileSystemRouter({
+				dir: assets,
+				style: "nextjs",
+				origin: origin,
+				assetPrefix: prefix,
+				fileExtensions: [],
+			})
 		case "static":
 			return new Bun.FileSystemRouter({
 				dir: assets,

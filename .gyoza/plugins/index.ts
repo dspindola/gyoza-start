@@ -1,0 +1,1 @@
+import "../../packages/plugins/gyoza-plugin-tailwind/loader"

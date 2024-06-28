@@ -13,12 +13,12 @@ export async function runCommand(runner: string, command: string[]) {
 	} catch (error) {
 		return {
 			data: null,
-			error: true,
+			error: error,
 		};
 	}
 }
 
-export default function Block({
+export function Block({
 	children: Command,
 	title,
 	runner,
