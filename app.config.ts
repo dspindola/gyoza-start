@@ -1,6 +1,7 @@
 import bunfig from "./bunfig.toml"
+import { defineConfig } from "./packages/app/config"
 
-export default {
+export default defineConfig({
 	server: {
 		hostname: import.meta.env?.HOSTNAME ?? "0.0.0.0",
 		development: import.meta.env.NODE_ENV !== "production"
@@ -34,4 +35,4 @@ export default {
 			pattern: "**/{*.tsx,*.jsx}"
 		}
 	]
-}
+})

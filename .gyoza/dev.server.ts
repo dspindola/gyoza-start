@@ -23,7 +23,14 @@ const dev = server(new Elysia({
 	assets: "public",
 	alwaysStatic: true,
 	directive: "public"
-})));
+})).use(
+	staticPlugin({
+		prefix: "/_assets",
+		assets: ".gyoza/_assets",
+		alwaysStatic: false,
+		noCache: true,
+	})
+));
 
 dev.listen(input.config.server, ({ url }) => {
 	console.log('%s', url)

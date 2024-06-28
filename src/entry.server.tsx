@@ -17,9 +17,13 @@ export async function handleRequest(context: Context) {
 
 	const module = await import(route.filePath);
 
+	console.log(route.params)
+
 	const stream = await renderToReadableStream(<App>
-		<module.default />
+		<module.default {...{ params: route.params, query: route.query }} />
 	</App>, {})
+
+	await stream.allReady
 
 	return new Response(stream)
 }

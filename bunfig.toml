@@ -1,6 +1,7 @@
 jsx = "react-jsx"
 jsxImportSource = "react"
 smol = true
+preload = ["./packages/plugins/gyoza-plugin-tailwind/loader.ts"]
 
 [css]
 ".tsx" = "tsx"
